@@ -118,6 +118,11 @@
         font-family: "Open Sans", sans-serif;
       }
 
+      section,
+      footer {
+        margin: auto;
+      }
+
       /* -------------- COMMON END ---------------- */
 
       /* -------------- NAVBAR START ---------------- */
@@ -198,7 +203,7 @@
       }
 
       /* MOBILE */
-      @media (max-width: 768px) {
+      @media (max-width: 968px) {
         .navbar {
           flex-wrap: wrap;
           justify-content: space-between;
@@ -309,7 +314,7 @@
         line-height: 1.6;
       }
 
-      @media (min-width: 769px) {
+      @media (min-width: 969px) {
         .hero {
           justify-content: flex-start;
         }
@@ -319,7 +324,7 @@
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 968px) {
         .hero::before {
           content: "";
           position: absolute;
@@ -344,322 +349,51 @@
         }
 
         .hero h1 {
+          color: #1f3a28;
           font-size: 1.9rem;
         }
 
         .hero p {
-          font-size: 1rem;
+          font-weight: 500;
+          color: #1d1d1b;
+          font-size: 1.1rem;
         }
       }
 
       /* -------------- HERO END ---------------- */
 
-      section,
-      footer {
-        margin: auto;
+      /* ---------- SPLIT SECTION START ---------- */
+      .split-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 0 auto;
+        min-height: 70vh;
+        padding: 4rem 2rem;
       }
 
       section.primary {
         background-color: var(--bg-card-secondary);
       }
 
-      .site-footer {
-        background-color: var(--bg-card); /* calm light tone */
-        color: #6f6b66;
-        padding: 3rem 2rem 2rem 2rem;
-        font-family: "Open Sans", sans-serif;
-      }
-
-      .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .footer-section h4 {
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: #2e4d35;
-        margin-bottom: 0.8rem;
-      }
-
-      .footer-section p,
-      .footer-section li {
-        font-weight: 600;
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .footer-section a {
-        color: #2e4d35;
-        text-decoration: none;
-      }
-
-      .footer-section a:hover {
-        text-decoration: underline;
-      }
-
-      .footer-section ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .footer-bottom {
-        margin-top: 2rem;
-        text-align: center;
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: #9a948d;
-      }
-
-      /* Mobile */
-      @media (max-width: 700px) {
-        .footer-container {
-          flex-direction: column;
-          gap: 1.5rem;
-        }
-      }
-
-      footer {
-        text-align: center;
-        color: var(--text-muted);
-        font-size: 0.85rem;
-        padding-bottom: 3rem;
-      }
-
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 1.9rem;
-        }
-
-        header,
-        section {
-          padding: 2rem 1.2rem;
-        }
-      }
-
-      #snackbar {
-        visibility: hidden;
-        min-width: 280px;
-        background-color: #2e4d35; /* dark green */
-        color: #fff;
-        text-align: center;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-
-        position: fixed;
-        left: 50%;
-        bottom: 30px;
-        transform: translateX(-50%);
-        z-index: 9999;
-
-        font-size: 0.95rem;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      #snackbar.show {
-        visibility: visible;
-        animation: fadein 0.3s ease, fadeout 0.3s ease 3s;
-      }
-
-      @keyframes fadein {
-        from {
-          opacity: 0;
-          bottom: 10px;
-        }
-        to {
-          opacity: 1;
-          bottom: 30px;
-        }
-      }
-
-      @keyframes fadeout {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-
-      #kapcsolat {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        padding: 4rem 5rem;
-        background-color: #f7f5f2; /* light calm background */
-      }
-
-      #kapcsolat h2 {
-        grid-column: 1 / -1; /* full width title */
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        font-size: 2.2rem;
-        color: #2e4d35;
-        margin-bottom: 2rem;
-      }
-
-      /* Left column - form */
-      #contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-      }
-
-      /* Right column - info + map */
-      #kapcsolat p,
-      #kapcsolat iframe {
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
-        color: #6f6b66;
-      }
-
-      /* Mobile responsive */
-      @media (max-width: 900px) {
-        #kapcsolat {
-          grid-template-columns: 1fr; /* stack columns */
-          padding: 2.5rem 2rem;
-        }
-
-        #kapcsolat iframe {
-          height: 250px;
-        }
-      }
-
-      form#contact-form {
-        max-width: 620px;
-        background-color: #ffffff;
-        padding: 2.5rem 2.8rem;
-        border-radius: 18px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-
-        display: flex;
-        flex-direction: column;
-        gap: 1.4rem;
-      }
-
-      /* Labels */
-      form#contact-form .input-label {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #3e3e3e;
-        gap: 0.35rem;
-      }
-
-      /* Inputs & textarea */
-      form#contact-form input,
-      form#contact-form textarea {
-        font-family: "Open Sans", sans-serif;
-        font-size: 1rem;
-        padding: 0.65rem 0.75rem;
-        border-radius: 8px;
-        border: 1px solid #dcdcdc;
-        transition: border-color 0.25s ease, box-shadow 0.25s ease;
-      }
-
-      /* Textarea */
-      form#contact-form textarea {
-        min-height: 110px;
-        resize: vertical;
-      }
-
-      /* Focus state */
-      form#contact-form input:focus,
-      form#contact-form textarea:focus {
-        outline: none;
-        border-color: #2e4d35; /* dark green */
-        box-shadow: 0 0 0 2px rgba(46, 77, 53, 0.15);
-      }
-
-      /* Submit button */
-      form#contact-form button {
-        margin-top: 0.5rem;
-        align-self: flex-start;
-
-        background-color: #2e4d35;
-        color: #ffffff;
-        font-size: 0.95rem;
-        font-weight: 500;
-        padding: 0.65rem 1.8rem;
-
-        border: none;
-        border-radius: 999px;
-        cursor: pointer;
-
-        transition: background-color 0.25s ease, transform 0.15s ease;
-      }
-
-      /* Button hover */
-      form#contact-form button:hover {
-        background-color: #24402c;
-        transform: translateY(-1px);
-      }
-
-      /* Button active */
-      form#contact-form button:active {
-        transform: translateY(0);
-      }
-
-      label .gdpr-checkbox {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.75rem;
-        color: #6f6b66;
-        line-height: 1.4;
-      }
-
-      .gdpr-checkbox a {
-        color: #2e4d35;
-        text-decoration: underline;
-      }
-
-      /* Mobile */
-      @media (max-width: 600px) {
-        form#contact-form {
-          padding: 2rem 1.6rem;
-        }
-      }
-
-      .split-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* two equal columns */
-        gap: 1rem; /* space between columns */
-        justify-content: center; /* center the whole grid */
-        margin: 0 auto; /* center the section in the viewport */
-        min-height: 70vh;
-        padding: 4rem 2rem; /* optional inner padding */
-      }
-
+      /* IMAGE COLUMN */
       .split-image {
         display: flex;
-        justify-content: center; /* center horizontally */
+        justify-content: center;
         align-items: center;
-        padding: 2rem; /* optional spacing around image */
+        padding: 2rem;
       }
 
       .split-image img {
-        max-width: 80%; /* not full-width, adjust as needed */
+        max-width: 80%;
+        max-height: 80%;
         height: auto;
-        border-radius: 25px; /* rounded corners for friendly look */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* soft shadow for depth */
+        border-radius: 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         object-fit: cover;
       }
 
-      /* responsive adjustments */
-      @media (max-width: 900px) {
-        .split-image img {
-          max-width: 95%; /* almost full width on mobile */
-        }
-      }
-
-      /* Content column */
+      /* TEXT COLUMN */
       .split-content {
         display: flex;
         flex-direction: column;
@@ -691,6 +425,329 @@
         max-width: 480px;
         line-height: 1.6;
       }
+
+      /* ---------- MOBILE RESPONSIVE ---------- */
+      @media (max-width: 968px) {
+        .split-section {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem 1.5rem;
+          min-height: auto;
+          gap: 2rem;
+        }
+
+        .split-image {
+          padding: 1rem 0;
+        }
+
+        .split-image img {
+          max-height: 70%;
+          height: auto;
+        }
+
+        .split-content {
+          padding: 1rem 0;
+        }
+
+        .split-content.left {
+          align-items: center;
+          text-align: center;
+        }
+
+        .split-content.right {
+          align-items: center;
+          text-align: center;
+        }
+
+        .split-content h2 {
+          font-size: 1.8rem;
+        }
+
+        .split-content p {
+          font-size: 0.95rem;
+          max-width: 100%;
+        }
+      }
+
+      /* ---------- SPLIT SECTION END ---------- */
+
+      /* ---------- CONTACT SECTION START ---------- */
+      #kapcsolat {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 4rem 12rem;
+        background-color: #f7f5f2; /* light calm background */
+      }
+
+      #kapcsolat h2 {
+        grid-column: 1 / -1;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 2.2rem;
+        color: #2e4d35;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      /* ----- Form Column ----- */
+      #contact-form {
+        max-width: 620px;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 2.5rem 2.8rem;
+        border-radius: 18px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+      }
+
+      #contact-form .input-label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #3e3e3e;
+        gap: 0.35rem;
+      }
+
+      #contact-form input,
+      #contact-form textarea {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        padding: 0.65rem 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #dcdcdc;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      #contact-form textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      #contact-form input:focus,
+      #contact-form textarea:focus {
+        outline: none;
+        border-color: #2e4d35;
+        box-shadow: 0 0 0 2px rgba(46, 77, 53, 0.15);
+      }
+
+      #contact-form button {
+        margin-top: 0.5rem;
+        align-self: flex-start;
+
+        background-color: #2e4d35;
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.65rem 1.8rem;
+
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+
+        transition: background-color 0.25s ease, transform 0.15s ease;
+      }
+
+      #contact-form button:hover {
+        background-color: #24402c;
+        transform: translateY(-1px);
+      }
+
+      #contact-form button:active {
+        transform: translateY(0);
+      }
+
+      /* GDPR checkbox */
+      #contact-form .gdpr-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: #6f6b66;
+        line-height: 1.4;
+      }
+
+      #contact-form .gdpr-checkbox a {
+        color: #2e4d35;
+        text-decoration: underline;
+      }
+
+      /* ----- Info + Map Column ----- */
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5rem;
+      }
+
+      .contact-info p {
+        font-size: 1rem;
+        color: #6f6b66;
+        line-height: 1.6;
+      }
+
+      .contact-info a {
+        color: #2e4d35;
+        text-decoration: underline;
+      }
+
+      .contact-info iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        margin-top: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .contact-info iframe:hover {
+        transform: scale(1.01);
+      }
+
+      /* ---------- MOBILE RESPONSIVE ---------- */
+      @media (max-width: 900px) {
+        #kapcsolat {
+          grid-template-columns: 1fr;
+          padding: 2.5rem 2rem;
+        }
+
+        #contact-form {
+          padding: 2rem 1.6rem;
+        }
+
+        .contact-info iframe {
+          height: 250px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        #kapcsolat h2 {
+          font-size: 1.9rem;
+          margin-bottom: 1.5rem;
+        }
+
+        #contact-form {
+          padding: 1.8rem 1.2rem;
+        }
+      }
+
+      /* ---------- CONTACT SECTION END ---------- */
+
+      /* ---------- FOOTER START ---------- */
+      .site-footer {
+        background-color: var(--bg-card); /* calm light tone */
+        color: #6f6b66;
+        padding: 3rem 2rem 2rem;
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-section h4 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #2e4d35;
+        margin-bottom: 0.8rem;
+      }
+
+      .footer-section p,
+      .footer-section li {
+        font-weight: 500;
+        font-size: 1rem;
+        color: #6f6b66;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section a {
+        color: #2e4d35;
+        text-decoration: none;
+        transition: color 0.25s ease, text-decoration 0.25s ease;
+      }
+
+      .footer-section a:hover {
+        color: #24402c;
+        text-decoration: underline;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Footer bottom */
+      .footer-bottom {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #9a948d;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 700px) {
+        .footer-container {
+          flex-direction: column;
+          gap: 1.5rem;
+          text-align: center;
+        }
+
+        .footer-section h4 {
+          font-size: 1.3rem;
+        }
+
+        .footer-section p,
+        .footer-section li {
+          font-size: 0.95rem;
+        }
+      }
+
+      /* ---------- FOOTER END ---------- */
+
+      /* ---------- SNACKBAR START ---------- */
+
+      #snackbar {
+        visibility: hidden;
+        min-width: 280px;
+        background-color: #2e4d35; /* dark green */
+        color: #fff;
+        text-align: center;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+
+        position: fixed;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+        z-index: 9999;
+
+        font-size: 0.95rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+        opacity: 0;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+      #snackbar.show {
+        visibility: visible;
+        opacity: 1;
+        bottom: 50px;
+        transform: translateX(-50%) translateY(0);
+      }
+      /* ---------- SNACKBAR END ---------- */
     </style>
   </head>
 
@@ -867,9 +924,13 @@
       </div>
     </footer>
 
+    <!-- GET YEAR SCRIPT START -->
     <script>
       document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
+    <!-- GET YEAR SCRIPT END -->
+
+    <!-- CONTACT SCRIPT START -->
     <script>
       const form = document.getElementById("contact-form");
       const snackbar = document.getElementById("snackbar");
@@ -906,6 +967,9 @@
 
       function showSnackbar(message) {
         snackbar.textContent = message;
+        snackbar.classList.remove("show");
+        void snackbar.offsetWidth;
+
         snackbar.classList.add("show");
 
         setTimeout(() => {
@@ -913,6 +977,9 @@
         }, 3500);
       }
     </script>
+    <!-- CONTACT SCRIPT END -->
+
+    <!-- NAVIGATION SCRIPT START -->
     <script>
       document.querySelectorAll("nav a").forEach((link) => {
         link.addEventListener("click", (e) => {
@@ -922,28 +989,47 @@
         });
       });
     </script>
+    <!-- NAVIGATION SCRIPT END -->
+
+    <!-- SIDEBAR SCRIPT START -->
     <script>
       const toggle = document.querySelector(".nav-toggle");
       const sidebar = document.querySelector(".sidebar");
       const backdrop = document.querySelector(".backdrop");
 
-      function closeMenu() {
-        sidebar.classList.remove("active");
-        backdrop.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-
+      // Open sidebar
       toggle.addEventListener("click", () => {
         sidebar.classList.add("active");
         backdrop.classList.add("active");
         document.body.style.overflow = "hidden";
       });
 
+      // Close sidebar
+      function closeMenu() {
+        sidebar.classList.remove("active");
+        backdrop.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Close when clicking backdrop
       backdrop.addEventListener("click", closeMenu);
 
+      // Close when clicking a sidebar link
       document.querySelectorAll(".sidebar a").forEach((link) => {
         link.addEventListener("click", closeMenu);
       });
+
+      // --- UX: Close sidebar on window resize ---
+      window.addEventListener("resize", () => {
+        if (sidebar.classList.contains("active")) {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
     </script>
+    <!-- SIDEBAR SCRIPT END -->
   </body>
 </html>
