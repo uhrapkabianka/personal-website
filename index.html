@@ -363,13 +363,18 @@
           justify-content: center;
         }
 
+        .hero .subtitle,
+        .hero h1 {
+          text-align: center;
+        }
+
         .hero-overlay {
           position: relative;
           z-index: 1;
           width: 100%;
           padding: 2.5rem 2rem;
           max-width: 80%;
-          text-align: center;
+          text-align: justify;
           border-radius: 1rem;
         }
 
@@ -508,7 +513,7 @@
         .split-section {
           display: flex;
           flex-direction: column;
-          padding: 2rem 1.5rem;
+          padding: 0;
           min-height: auto;
           gap: 2rem;
         }
@@ -528,20 +533,30 @@
 
         .split-content.left {
           align-items: center;
-          text-align: center;
+          text-align: justify;
         }
 
         .split-content.right {
           align-items: center;
-          text-align: center;
+          text-align: justify;
+        }
+
+        .split-content-list {
+          align-items: left;
+          text-align: left;
         }
 
         .split-content h2 {
+          text-align: center;
           font-size: 1.8rem;
         }
 
+        .split-content strong {
+          font-size: 1.1rem;
+        }
+
         .split-content p {
-          font-size: 0.95rem;
+          font-size: 1rem;
           max-width: 100%;
         }
       }
@@ -552,8 +567,10 @@
       #kapcsolat {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        padding: 4rem 12rem;
+        gap: 0rem 5rem;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 4rem 2rem;
       }
 
       #kapcsolat h2 {
@@ -678,7 +695,7 @@
       .contact-info {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         gap: 1.5rem;
       }
 
@@ -713,12 +730,12 @@
           grid-template-columns: 1fr;
         }
 
-        #contact-form {
-          padding: 2rem 1.6rem;
-        }
-
         .contact-info iframe {
           height: 250px;
+        }
+
+        #contact-form {
+          margin-bottom: 3rem;
         }
       }
 
@@ -730,6 +747,7 @@
 
         #contact-form {
           padding: 1.8rem 1.2rem;
+          margin-bottom: 2rem;
         }
       }
 
@@ -970,7 +988,7 @@
             </strong>
           </p>
 
-          <ul class=".split-content-list">
+          <ul class="split-content-list">
             <li>önismeret és önfejlesztés</li>
             <li>életvezetési nehézségek, elakadások</li>
             <li>önértékelési problémák</li>
