@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Pszichológus Budapest | Uhrapka Bianka</title>
+    <title>Pszichológus Sopron | Uhrapka Bianka</title>
 
     <meta
       name="description"
-      content="Uhrapka Bianka okleveles pszichológus Budapesten. Szorongáskezelés, stresszoldás, párterápia és egyéni tanácsadás bizalmas környezetben." />
+      content="Uhrapka Bianka okleveles pszichológus Sopronen. Szorongáskezelés, stresszoldás, párterápia és egyéni tanácsadás bizalmas környezetben." />
 
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Pszichológus Budapest | Uhrapka Bianka" />
+    <meta property="og:title" content="Pszichológus Sopron | Uhrapka Bianka" />
     <meta
       property="og:description"
-      content="Okleveles pszichológus Budapesten – pszichológiai tanácsadás felnőtteknek és pároknak." />
+      content="Okleveles pszichológus Sopronen – pszichológiai tanácsadás felnőtteknek és pároknak." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourdomain.hu" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet" />
@@ -32,14 +32,14 @@
         "telephone": "+36301234567",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1051 Budapest",
-          "addressLocality": "Budapest",
-          "postalCode": "1051",
+          "streetAddress": "9400 Sopron",
+          "addressLocality": "Sopron",
+          "postalCode": "9400",
           "addressCountry": "HU"
         },
         "areaServed": {
           "@type": "AdministrativeArea",
-          "name": "Budapest"
+          "name": "Sopron"
         }
       }
     </script>
@@ -405,6 +405,12 @@
         background-color: var(--bg-card-secondary);
       }
 
+      .content-block {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
       /* IMAGE COLUMN */
       .split-image {
         display: flex;
@@ -441,12 +447,28 @@
         text-align: end;
       }
 
+      .split-content.right .split-content-list {
+        align-self: stretch;
+        text-align: left;
+        margin-left: auto;
+        max-width: 420px;
+      }
+
       .split-content h2 {
         font-family: "Raleway", sans-serif;
         font-size: 2.2rem;
         font-weight: 300;
         color: var(--accent2);
         margin-bottom: 1rem;
+      }
+
+      .split-content h3 {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 0.8rem;
+        color: var(--accent);
       }
 
       .split-content strong {
@@ -458,6 +480,27 @@
         font-size: 1.2rem;
         color: var(--text-muted);
         line-height: 1.6;
+      }
+
+      .split-content-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .split-content-list li {
+        font-size: 1.2rem;
+        padding-left: 1.2rem;
+        margin-bottom: 0.6rem;
+        position: relative;
+        color: var(--text-muted);
+      }
+
+      .split-content-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
       }
 
       /* ---------- MOBILE RESPONSIVE ---------- */
@@ -652,7 +695,7 @@
 
       .contact-info iframe {
         width: 100%;
-        height: 300px;
+        height: 500px;
         border: none;
         border-radius: 12px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -665,10 +708,9 @@
       }
 
       /* ---------- MOBILE RESPONSIVE ---------- */
-      @media (max-width: 900px) {
+      @media (max-width: 1190px) {
         #kapcsolat {
           grid-template-columns: 1fr;
-          padding: 2.5rem 2rem;
         }
 
         #contact-form {
@@ -919,32 +961,76 @@
 
       <section id="szolgaltatasok" class="split-section secondary">
         <div class="split-content left">
-          <h2>Szolgáltatások</h2>
+          <h2>Miben tudok segíteni?</h2>
 
-          <h3>Szorongás és stressz kezelése</h3>
-          <p>Segítség nyújtása szorongásos tünetek, tartós stressz, kimerültség és életvezetési nehézségek esetén.</p>
+          <p>
+            <strong>
+              A közös munka során azokkal az élethelyzetekkel és nehézségekkel foglalkozunk, amelyekben egyedül már
+              nehéz eligazodni, vagy változásra van szükség.
+            </strong>
+          </p>
 
-          <h3>Párterápia</h3>
-          <p>Kommunikációs problémák, konfliktusok, elakadások feldolgozása párkapcsolati tanácsadás keretében.</p>
+          <ul class=".split-content-list">
+            <li>önismeret és önfejlesztés</li>
+            <li>életvezetési nehézségek, elakadások</li>
+            <li>önértékelési problémák</li>
+            <li>én-határok kialakítása</li>
+            <li>stresszkezelés, teljesítményszorongás, autogén tréning</li>
+            <li>váratlan élethelyzetek feldolgozása</li>
+            <li>gyász és veszteségfolyamat támogatása</li>
+            <li>kommunikációs és konfliktuskezelési készségek fejlesztése</li>
+            <li>pszichoszomatikus tünetek</li>
+          </ul>
 
-          <h3>Egyéni pszichológiai tanácsadás</h3>
-          <p>Önismereti munka, érzelmi nehézségek feldolgozása, személyes fejlődés támogatása.</p>
+          <p>
+            <strong>
+              Amennyiben a tünetek súlyossága meghaladja az ambuláns ellátás kereteit, a kliens érdekében további
+              ellátási formát javaslok.
+            </strong>
+          </p>
         </div>
+
         <div class="split-image">
-          <img src="illustration13.png" alt="Szolgaltatasok" />
+          <img src="illustration1.png" alt="Szolgáltatások" />
         </div>
       </section>
 
       <section id="folyamat" class="split-section primary">
         <div class="split-image">
-          <img src="illustration15.jpg" alt="Bemutatkozás" />
+          <img src="illustration2.png" alt="Hogyan zajlik a terápia" />
         </div>
 
-        <div class="split-content right">
+        <div class="split-content left">
           <h2>Hogyan zajlik a terápia?</h2>
+
           <p>
-            Az első alkalom során közösen áttekintjük a felmerülő problémákat és meghatározzuk a terápiás célokat. A
-            folyamat az Ön igényeihez és lehetőségeihez igazodik.
+            <strong>A közös munka az Ön igényeihez és tempójához igazodik, biztonságos és elfogadó légkörben.</strong>
+          </p>
+          <div class="content-block">
+            <h3>1. Az első alkalmak</h3>
+            <p>
+              Az első 1–3 találkozás az ismerkedésről és a megkeresés okának feltárásáról szól. Közösen körbejárjuk az
+              elakadást, valamint átbeszéljük a terápiás kereteket.
+            </p>
+          </div>
+          <div class="content-block">
+            <h3>2. A közös munka menete</h3>
+            <p>Kölcsönös szimpátia esetén szóbeli megállapodást kötünk, és közösen meghatározzuk a terápiás célokat.</p>
+          </div>
+          <div class="content-block">
+            <h3>3. Gyakorlati tudnivalók</h3>
+            <ul class="split-content-list">
+              <li>Találkozások gyakorisága: heti egy alkalom</li>
+              <li>Egy ülés időtartama: 50 perc</li>
+              <li>Konzultáció díja: 18.000 Ft / 50 perc</li>
+              <li>Lemondás: 48 órán belül díjköteles</li>
+            </ul>
+          </div>
+          <p>
+            <strong>
+              A terápiás folyamatot szigorú titoktartás övezi, az elhangzott információkat harmadik féllel nem osztom
+              meg.
+            </strong>
           </p>
         </div>
       </section>
@@ -992,16 +1078,15 @@
         <div class="contact-info">
           <p>
             <strong>Uhrapka Bianka – pszichológus</strong><br />
-            📍 1051 Budapest<br />
-            📞 +36 30 123 4567<br />
+            📍 9400 Sopron Ágfalvi út 2. (Diaber 2 szolgáltatóház)<br />
             📧 <a href="mailto:uhrapkabianka@gmail.com">uhrapkabianka@gmail.com</a>
           </p>
 
           <iframe
-            title="Pszichológus rendelő Budapest térkép"
-            src="https://www.google.com/maps?q=1051+Budapest&output=embed"
+            title="Pszichológus rendelő Sopron térkép"
+            src="https://www.google.com/maps?q=9400%20Sopron%20Ágfalvi%20út%202%20Diaber%202%20szolgáltatóház&output=embed"
             width="100%"
-            height="300"
+            height="500"
             style="border: 0; margin-top: 1rem"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
@@ -1017,8 +1102,7 @@
         <div class="footer-section">
           <h4>Kapcsolat</h4>
           <p>📧 <a href="mailto:uhrapkabianka@gmail.com">uhrapkabianka@gmail.com</a></p>
-          <p>🏠 1025 Budapest, Valami Ö. Valami u. x. II. em.</p>
-          <p>🏠 1025 Budapest, Valami u. 51. mfsz. 8.</p>
+          <p>🏠 1025 Sopron, Ágfalvi út 2. (Diaber 2 szolgáltatóház)</p>
         </div>
 
         <!-- Useful links -->
