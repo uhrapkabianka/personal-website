@@ -215,7 +215,7 @@
       }
 
       .sidebar a:hover {
-        color: var(--accent-hover);
+        color: var(--accent);
         transform: translateX(5px);
       }
 
@@ -317,11 +317,14 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 1.2rem; /* bigger nav items */
-        transition: color 0.3s ease;
+        transition:
+          color 0.2s ease,
+          transform 0.2s ease;
       }
 
       .nav-links a:hover {
         color: var(--accent);
+        transform: translateY(-3px);
       }
 
       /* -------------- NAVBAR END ---------------- */
