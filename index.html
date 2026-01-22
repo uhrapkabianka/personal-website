@@ -782,6 +782,10 @@
         line-height: 1.6;
       }
 
+      .contact-info .contact-text {
+        color: var(--text-main);
+      }
+
       .contact-info a {
         color: var(--accent2);
         text-decoration: underline;
@@ -903,6 +907,11 @@
         font-size: 0.9rem;
         font-weight: 500;
         color: var(--text-muted);
+      }
+
+      .footer-contact-text,
+      .footer-contact-icon {
+        color: var(--accent2);
       }
 
       /* Mobile responsive */
@@ -1221,18 +1230,20 @@
         <!-- Right column -->
         <div class="contact-info">
           <p>
-            <strong>Uhrapka Bianka – pszichológus</strong><br />
-            <i class="fas fa-map-marker-alt"></i><span>9400 Sopron Ágfalvi út 2. (Diaber 2 szolgáltatóház)</span> –
+            <strong><span class="contact-text">Uhrapka Bianka – pszichológus</span></strong
+            ><br />
+            <i class="fas fa-map-marker-alt"></i
+            ><span class="contact-text">9400 Sopron Ágfalvi út 2. (Diaber 2 szolgáltatóház)</span> –
             <em>Parkolás ingyenes</em><br />
             <a href="mailto:uhrapkabianka@gmail.com" style="all: unset; cursor: pointer"
-              ><i class="fas fa-envelope"></i><span>uhrapkabianka@gmail.com</span></a
+              ><i class="fas fa-envelope"></i><span class="contact-text">uhrapkabianka@gmail.com</span></a
             ><br />
             <a
               href="https://www.facebook.com/profile.php?id=61582371693162"
               target="_blank"
               rel="noopener"
               style="all: unset; cursor: pointer">
-              <i class="fab fa-facebook-square"></i><span>Uhrapka Bianka - Pszichológus</span>
+              <i class="fab fa-facebook-square"></i><span class="contact-text">Uhrapka Bianka - Pszichológus</span>
             </a>
           </p>
 
@@ -1255,17 +1266,20 @@
         <!-- Contact info -->
         <div class="footer-section">
           <h4>Kapcsolat</h4>
-          <i class="fas fa-map-marker-alt"></i><span>9400 Sopron Ágfalvi út 2. (Diaber 2 szolgáltatóház)</span>
+          <i class="fas fa-map-marker-alt footer-contact-icon"></i
+          ><span class="footer-contact-text">9400 Sopron Ágfalvi út 2. (Diaber 2 szolgáltatóház)</span>
           <br />
           <a href="mailto:uhrapkabianka@gmail.com" style="all: unset; cursor: pointer"
-            ><i class="fas fa-envelope"></i><span>uhrapkabianka@gmail.com</span></a
+            ><i class="fas fa-envelope footer-contact-icon"></i
+            ><span class="footer-contact-text">uhrapkabianka@gmail.com</span></a
           ><br />
           <a
             href="https://www.facebook.com/profile.php?id=61582371693162"
             target="_blank"
             rel="noopener"
             style="all: unset; cursor: pointer">
-            <i class="fab fa-facebook-square"></i><span>Uhrapka Bianka - Pszichológus</span>
+            <i class="fab fa-facebook-square footer-contact-icon"></i
+            ><span class="footer-contact-text">Uhrapka Bianka - Pszichológus</span>
           </a>
         </div>
 
