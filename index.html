@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
@@ -88,9 +88,12 @@
         color: var(--text-main);
         line-height: 1.8;
         background-color: var(--bg-main);
-        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
+        background-image:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
           radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-        background-size: 100% 100%, 60px 60px;
+        background-size:
+          100% 100%,
+          60px 60px;
       }
 
       h1,
@@ -630,7 +633,9 @@
         padding: 0.65rem 0.75rem;
         border-radius: 8px;
         border: 1px solid #dcdcdc;
-        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        transition:
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
       }
 
       #contact-form textarea {
@@ -663,7 +668,9 @@
         border-radius: 10px;
         cursor: pointer;
 
-        transition: background-color 0.25s ease, transform 0.15s ease;
+        transition:
+          background-color 0.25s ease,
+          transform 0.15s ease;
       }
 
       #contact-form button:hover {
@@ -714,6 +721,10 @@
         flex-direction: column;
         justify-content: center;
         gap: 1.5rem;
+      }
+
+      .form-note {
+        color: var(--text-muted);
       }
 
       .contact-info p {
@@ -820,7 +831,9 @@
       .footer-section a {
         color: var(--accent2);
         text-decoration: none;
-        transition: color 0.25s ease, text-decoration 0.25s ease;
+        transition:
+          color 0.25s ease,
+          text-decoration 0.25s ease;
       }
 
       .footer-section a:hover {
@@ -888,7 +901,9 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 
         opacity: 0;
-        transition: opacity 0.4s ease, transform 0.4s ease;
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
       }
 
       #snackbar.show {
@@ -1094,13 +1109,13 @@
             Üzenet
             <textarea name="message" required></textarea>
           </label>
-
-          <label class="gdpr-checkbox">
-            <input type="checkbox" name="gdpr" required />
-            <span>
-              Elolvastam és elfogadom az
-              <a href="/docs/adatkezelesi-tajekoztato.pdf" target="_blank"> adatkezelési tájékoztatót </a>.
-            </span>
+          <p class="form-note">Az üzenet elküldéséhez az adatkezelési feltételek elfogadása szükséges.</p>
+          <label>
+            <input type="checkbox" required />
+            Elolvastam és elfogadom az
+            <a href="/adatkezeles_aszf.html" target="_blank" rel="noopener">
+              adatkezelési tájékoztatót és az Általános Szerződési Feltételeket </a
+            >.
           </label>
 
           <button type="submit">
@@ -1144,8 +1159,8 @@
         <div class="footer-section">
           <h4>Hasznos információk</h4>
           <ul>
-            <li><a href="/docs/adatkezelesi-tajekoztato.pdf" target="_blank">Adatkezelési tájékoztató</a></li>
-            <li><a href="/impresszum">Impresszum</a></li>
+            <li><a href="/adatkezeles_aszf.html">Adatkezelési tájékoztató</a></li>
+            <li><a href="/impresszum.html">Impresszum</a></li>
           </ul>
         </div>
       </div>
