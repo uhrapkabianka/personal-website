@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="hu">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -30,13 +32,17 @@
       name="twitter:description"
       content="Okleveles pszichológus Sopron – pszichológiai tanácsadás felnőtteknek és pároknak." />
     <meta name="twitter:image" content="https://szilveszter94.github.io/portfolio-psichology/profile.png" />
+    <meta name="geo.region" content="HU-GS" />
+    <meta name="geo.placename" content="Sopron" />
+    <meta name="color-scheme" content="light" />
 
+    <link rel="canonical" href="https://szilveszter94.github.io/portfolio-psichology" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.manifest" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
 
@@ -47,10 +53,11 @@
         "@type": "Psychologist",
         "name": "Uhrapka Bianka",
         "url": "https://szilveszter94.github.io/portfolio-psichology",
+        "image": "https://szilveszter94.github.io/portfolio-psichology/profile.png",
         "telephone": "+36301234567",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "9400 Sopron",
           "addressLocality": "Sopron",
           "postalCode": "9400",
           "addressCountry": "HU"
@@ -58,7 +65,84 @@
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": "Sopron"
-        }
+        },
+        "knowsAbout": ["szorongás", "stresszkezelés", "párterápia", "önismeret", "életvezetési tanácsadás"],
+        "sameAs": ["https://www.facebook.com/profile.php?id=61582371693162"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Főoldal",
+            "item": "https://szilveszter94.github.io/portfolio-psichology"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pszichológus Sopron"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Milyen problémákkal fordulhatok pszichológushoz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pszichológiai tanácsadás során önismereti kérdésekkel, életvezetési nehézségekkel, stresszkezeléssel, szorongással, veszteségfeldolgozással és elakadásokkal foglalkozunk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mennyi ideig tart egy pszichológiai konzultáció?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Egy konzultáció időtartama 50 perc."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Milyen gyakran történnek az alkalmak?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A találkozások jellemzően heti egy alkalommal történnek, a kliens igényeihez igazodva."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mennyibe kerül egy pszichológiai konzultáció Sopronban?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Egy pszichológiai konzultáció díja 18.000 Ft / 50 perc."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hol található a rendelő?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A rendelő Sopronban, a 9400 Sopron, Ágfalvi út 2. szám alatt található, ingyenes parkolási lehetőséggel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Online konzultációra van lehetőség?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Az online konzultáció lehetőségéről egyéni egyeztetés alapján tudunk dönteni."
+            }
+          }
+        ]
       }
     </script>
 
@@ -74,21 +158,23 @@
         --accent: #3a463a; /* warm beige accent */
         --accent2: #2e4d35;
         --accent-hover: #24402c;
-
-        --accent-mobile: #011301;
-        --main-mobile: #1f3a28;
-        --secondary-mobile: #1d1d1b;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
       body {
         margin: 0;
         font-family: "Open Sans", sans-serif;
         color: var(--text-main);
-        line-height: 1.8;
         background-color: var(--bg-main);
         background-image:
           linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%),
@@ -103,16 +189,15 @@
         color: var(--accent);
         font-weight: 500;
         letter-spacing: 0.02em;
+        margin: 0 0 1rem 0;
       }
 
       h1 {
         font-size: 2.4rem;
-        margin-bottom: 0.5rem;
       }
 
       h2 {
         font-size: 1.6rem;
-        margin-bottom: 0.5rem;
       }
 
       h3 {
@@ -251,7 +336,7 @@
       }
 
       /* MOBILE */
-      @media (max-width: 968px) {
+      @media (max-width: 1200px) {
         .navbar {
           padding: 0.4rem 2rem;
           flex-wrap: wrap;
@@ -332,12 +417,14 @@
       /* -------------- HERO START ---------------- */
 
       .hero {
-        min-height: auto;
-        padding: 0;
+        content-visibility: auto;
+        min-height: 70vh;
+        margin: 0 auto;
         position: relative;
+        background-attachment: fixed;
         background-image: url("home.png");
         background-size: cover;
-        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         align-items: center;
       }
@@ -350,8 +437,6 @@
         flex-direction: column;
         justify-content: center;
         gap: 1.5rem;
-        background: rgba(255, 255, 255, 0.349);
-        backdrop-filter: blur(10px);
       }
 
       /* text */
@@ -383,20 +468,6 @@
         font-size: 1.2rem;
         color: var(--text-muted);
         line-height: 1.6;
-      }
-
-      @media (max-width: 1800px) {
-        .hero strong {
-          color: var(--accent-mobile);
-        }
-
-        .hero h1 {
-          color: var(--main-mobile);
-        }
-
-        .hero p {
-          color: var(--secondary-mobile);
-        }
       }
 
       @media (min-width: 969px) {
@@ -431,18 +502,12 @@
           border-radius: 1rem;
         }
 
-        .hero strong {
-          color: var(--accent-mobile);
-        }
-
         .hero h1 {
-          color: var(--main-mobile);
           font-size: 1.9rem;
         }
 
         .hero p {
           font-weight: 500;
-          color: var(--secondary-mobile);
           font-size: 1.1rem;
         }
       }
@@ -464,8 +529,13 @@
       }
 
       .content-block {
-        padding-bottom: 2rem;
+        padding: 1rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .content-block.no-border {
+        border-bottom: none;
+        padding-bottom: 0;
       }
 
       /* IMAGE COLUMN */
@@ -473,7 +543,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2rem;
       }
 
       .split-image img {
@@ -496,20 +565,34 @@
         text-align: start;
       }
 
+      .split-content-title {
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+
+      .split-content-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 90%;
+        height: 3px;
+        background: rgba(0, 0, 0, 0.212);
+        border-radius: 10px;
+        transform-origin: bottom right;
+      }
+
       .split-content h2 {
         font-family: "Raleway", sans-serif;
         font-size: 2.2rem;
         font-weight: 300;
         color: var(--accent2);
-        margin-bottom: 1rem;
       }
 
       .split-content h3 {
         font-family: "Raleway", sans-serif;
         font-size: 1.3rem;
         font-weight: 700;
-        margin-top: 2.5rem;
-        margin-bottom: 0.8rem;
         color: var(--accent);
       }
 
@@ -531,7 +614,7 @@
         max-width: 420px;
         list-style: none;
         padding: 0;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0 0 0;
       }
 
       .split-content-list li {
@@ -547,6 +630,10 @@
         position: absolute;
         left: 0;
         color: var(--accent);
+      }
+
+      .split-content-last-item {
+        margin-bottom: 2rem;
       }
 
       .education-list {
@@ -634,7 +721,6 @@
         font-weight: 300;
         font-size: 2.2rem;
         color: var(--accent2);
-        margin-bottom: 2rem;
         text-align: center;
       }
 
@@ -824,7 +910,6 @@
       @media (max-width: 600px) {
         #kapcsolat h2 {
           font-size: 1.9rem;
-          margin-bottom: 1.5rem;
         }
 
         #contact-form {
@@ -977,7 +1062,7 @@
   <body>
     <nav class="navbar">
       <div class="nav-logo">
-        <img src="logo.png" alt="Uhrapka Bianka Logo" />
+        <img src="logo.png" loading="lazy" width="400" height="500" alt="Uhrapka Bianka Logo" />
 
         <div class="nav-title">
           <span class="first-name">Uhrapka</span>
@@ -989,10 +1074,19 @@
         <a href="#bemutatkozas">Bemutatkozás</a>
         <a href="#szolgaltatasok">Szolgáltatások</a>
         <a href="#folyamat">Folyamat</a>
+        <a href="#arak">Árak</a>
+        <a href="#gyik">GYIK</a>
         <a href="#kapcsolat">Kapcsolat</a>
       </div>
 
-      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-label="Navigáció megnyitása"
+        aria-expanded="false"
+        aria-controls="sidebar">
+        ☰
+      </button>
     </nav>
 
     <div class="backdrop"></div>
@@ -1002,6 +1096,8 @@
       <a href="#bemutatkozas">Bemutatkozás</a>
       <a href="#szolgaltatasok">Szolgáltatások</a>
       <a href="#folyamat">Folyamat</a>
+      <a href="#arak">Árak</a>
+      <a href="#gyik">GYIK</a>
       <a href="#kapcsolat">Kapcsolat</a>
     </aside>
     <header class="hero">
@@ -1009,7 +1105,7 @@
         <h1>
           Uhrapka Bianka<br />
           <span class="hero-subtitle"
-            >okleveles pszichológus & képzésben lévő felnőtt komplex integratív terapeuta</span
+            >okleveles pszichológus Sopronban - felnőtt komplex integratív terapeuta (képzésben)</span
           >
         </h1>
         <p class="hero-lead">Üdvözlöm a honlapomon!</p>
@@ -1020,17 +1116,19 @@
           nyújtok abban, hogy egy biztonságos és támogató közegben közösen hozzuk felszínre azokat a belső
           erőforrásokat, melyek már most Önben vannak, csak talán még nem tud róluk
         </p>
+
+        <p class="hero-lead"><i>Részletes tájékoztatás a konzultációk menetéről és árairól lentebb található.</i></p>
       </div>
     </header>
 
     <main>
       <section id="bemutatkozas" class="split-section primary">
         <div class="split-image">
-          <img src="profile.png" alt="Bemutatkozás" />
+          <img src="profile.png" loading="lazy" width="600" height="800" alt="Uhrapka Bianka pszichológus Sopron" />
         </div>
 
         <div class="split-content">
-          <h2>Bemutatkozás</h2>
+          <h2 class="split-content-title">Bemutatkozás</h2>
 
           <p>
             <strong
@@ -1064,11 +1162,13 @@
             Fontos számomra, hogy klienseim saját ritmusukban haladhassanak.
           </p>
 
-          <p>
+          <p>Rendelésem Sopronban, a 9400 Sopron, Ágfalvi út 2. szám alatt (Diaber 2 szolgáltatóház) található.</p>
+
+          <p class="split-content-last-item">
             <strong><i>Szeretettel várom jelentkezését, és a közös munka elkezdését.</i></strong>
           </p>
 
-          <h2>Végzettségek & Képzések</h2>
+          <h2 class="split-content-title">Végzettségek & Képzések</h2>
 
           <p>
             <strong>
@@ -1110,7 +1210,7 @@
 
       <section id="szolgaltatasok" class="split-section secondary">
         <div class="split-content">
-          <h2>Miben tudok segíteni?</h2>
+          <h2 class="split-content-title">Miben tudok segíteni?</h2>
 
           <p>
             <strong>
@@ -1139,17 +1239,22 @@
         </div>
 
         <div class="split-image">
-          <img src="illustration1.png" alt="Szolgáltatások" />
+          <img
+            src="szolgaltatasok.png"
+            loading="lazy"
+            width="800"
+            height="600"
+            alt="Pszichológiai tanácsadás és szolgáltatások Sopronban" />
         </div>
       </section>
 
       <section id="folyamat" class="split-section primary">
         <div class="split-image">
-          <img src="illustration2.png" alt="Hogyan zajlik a terápia" />
+          <img src="terapia.png" loading="lazy" width="800" height="500" alt="Pszichológiai terápia folyamata Sopron" />
         </div>
 
         <div class="split-content">
-          <h2>Hogyan zajlik a terápia?</h2>
+          <h2 class="split-content-title">Hogyan zajlik a terápia?</h2>
 
           <p>
             <strong>A közös munka az Ön igényeihez és tempójához igazodik, biztonságos és elfogadó légkörben.</strong>
@@ -1165,8 +1270,12 @@
             <h3>2. A közös munka menete</h3>
             <p>Kölcsönös szimpátia esetén szóbeli megállapodást kötünk, és közösen meghatározzuk a terápiás célokat.</p>
           </div>
-          <div class="content-block">
+          <div id="arak" class="content-block">
             <h3>3. Gyakorlati tudnivalók</h3>
+            <p>
+              Amennyiben pszichológust keres Sopronban, és fontos az átlátható árképzés, az alábbi információk
+              segítséget nyújtanak a döntésben.
+            </p>
             <ul class="split-content-list">
               <li>Találkozások gyakorisága: heti egy alkalom</li>
               <li>Egy ülés időtartama: 50 perc</li>
@@ -1188,6 +1297,10 @@
           <h2>Üzenetküldés</h2>
           <!-- Left column -->
           <form id="contact-form" action="https://formspree.io/f/mqeedrko" method="POST" novalidate>
+            <p>
+              Amennyiben pszichológust keres Sopronban, az alábbi űrlapon keresztül tud időpontot kérni vagy kérdést
+              feltenni.
+            </p>
             <label class="input-label">
               Név
               <input type="text" name="name" required />
@@ -1258,6 +1371,30 @@
           </iframe>
         </div>
       </section>
+      <section id="gyik" class="split-section primary">
+        <div class="split-content">
+          <h2 class="split-content-title">Gyakran ismételt kérdések</h2>
+
+          <div class="content-block">
+            <h3>1. Milyen problémákkal fordulhatok pszichológushoz?</h3>
+            <p>
+              Pszichológiai tanácsadás során többek között önismereti kérdésekkel, stresszkezeléssel, szorongással,
+              életvezetési elakadásokkal és veszteségfeldolgozással foglalkozunk.
+            </p>
+          </div>
+          <div class="content-block">
+            <h3>2. Mennyi ideig tart egy konzultáció?</h3>
+            <p>Egy ülés időtartama 50 perc.</p>
+          </div>
+          <div class="content-block no-border">
+            <h3>3. Hol található a rendelő?</h3>
+            <p>A rendelő Sopronban, az Ágfalvi út 2. szám alatt található, ingyenes parkolási lehetőséggel.</p>
+          </div>
+        </div>
+        <div class="split-image">
+          <img src="faq.png" loading="lazy" width="500" height="400" alt="Gyakran ismételt kérdések" />
+        </div>
+      </section>
       <div id="snackbar">Üzenet sikeresen elküldve 🌿</div>
     </main>
 
@@ -1287,6 +1424,8 @@
         <div class="footer-section">
           <h4>Hasznos információk</h4>
           <ul>
+            <li><a href="#arak">Árak</a></li>
+            <li><a href="#gyik">GYIK</a></li>
             <li><a href="/adatkezeles_aszf.html">Adatkezelési tájékoztató</a></li>
             <li><a href="/impresszum.html">Impresszum</a></li>
           </ul>
@@ -1301,13 +1440,13 @@
     </footer>
 
     <!-- GET YEAR SCRIPT START -->
-    <script>
+    <script defer>
       document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
     <!-- GET YEAR SCRIPT END -->
 
     <!-- CONTACT SCRIPT START -->
-    <script>
+    <script defer>
       const form = document.getElementById("contact-form");
       const snackbar = document.getElementById("snackbar");
 
@@ -1361,7 +1500,7 @@
     <!-- CONTACT SCRIPT END -->
 
     <!-- NAVIGATION SCRIPT START -->
-    <script>
+    <script defer>
       document.querySelectorAll("nav a").forEach((link) => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
@@ -1375,7 +1514,7 @@
     <!-- NAVIGATION SCRIPT END -->
 
     <!-- SIDEBAR SCRIPT START -->
-    <script>
+    <script defer>
       const toggle = document.querySelector(".nav-toggle");
       const sidebar = document.querySelector(".sidebar");
       const backdrop = document.querySelector(".backdrop");

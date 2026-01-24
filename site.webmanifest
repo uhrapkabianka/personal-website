@@ -1,0 +1,26 @@
+{
+  "name": "Uhrapka Bianka – Pszichológus Sopron",
+  "short_name": "Pszichológus",
+  "description": "Uhrapka Bianka okleveles pszichológus Sopronban – egyéni tanácsadás és terápia",
+  "lang": "hu",
+  "start_url": ".",
+  "scope": "/portfolio-psichology/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f4f1",
+  "theme_color": "#f6f4f1",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
