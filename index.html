@@ -310,6 +310,8 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      cursor: pointer;
+      text-decoration: none;
     }
 
     .nav-logo img {
@@ -1136,15 +1138,14 @@
 
 <body>
   <nav class="navbar">
-    <div class="nav-logo">
+    <a href="#top" class="nav-logo">
       <img src="logo.png" loading="lazy" width="400" height="500" alt="Uhrapka Bianka Logo" />
-
       <div class="nav-title">
         <span class="first-name">Uhrapka</span>
         <span class="last-name">Bianka</span>
         <span class="profession">Pszichológus</span>
       </div>
-    </div>
+    </a>
     <div class="nav-links">
       <a href="#bemutatkozas">Bemutatkozás</a>
       <a href="#szolgaltatasok">Szolgáltatások</a>
@@ -1167,7 +1168,7 @@
     <a href="#folyamat">Folyamat</a>
     <a href="#kapcsolat">Kapcsolat</a>
   </aside>
-  <header class="hero">
+  <header id="top" class="hero">
     <div class="hero-overlay">
       <h1>
         Uhrapka Bianka<br />
